@@ -1,5 +1,5 @@
 export interface ContainerProps {
-    backgroundColour: string;
+    backgroundColour?: string;
     font?: string;
 }
 
