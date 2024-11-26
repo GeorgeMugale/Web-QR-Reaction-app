@@ -4,14 +4,13 @@
 body{
     
 }
-.card{
+.card {
     background: hsl(0, 0%, 100%);
     margin: 0em 1em 0em 1em;
     padding: 1.2em;
     border: solid 1px hsl(0, 0%, 7%);
     border-radius: 20px;
     box-shadow: 12px 12px 10px -6px rgba(0,0,0,1);
-
 }
 .img-head img{
     width: 100%;

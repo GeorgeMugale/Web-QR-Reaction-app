@@ -3,7 +3,7 @@ import { ContainerProps } from './PropTypes';
 
 
 
-const ContainerComponent: React.FC<ContainerProps> = ({ backgroundColour = "hsl(47, 88%, 63%)", font = "Figtree, sans-serif" }) => (
+const ContainerComponent: React.FC<ContainerProps> = ({ backgroundColour = "hsl(47, 88%, 63%)", font = "Figtree, sans-serif", children }) => (
 
     <div style={{
         backgroundColor: backgroundColour,
@@ -15,6 +15,7 @@ const ContainerComponent: React.FC<ContainerProps> = ({ backgroundColour = "hsl(
         alignItems: 'center',
         justifyContent: 'center',
     }}>
+        { children }
     </div>
 );
 
