@@ -14,6 +14,7 @@ const ContainerComponent: React.FC<ContainerProps> = ({ backgroundColour = "hsl(
         width: '100vw',
         alignItems: 'center',
         justifyContent: 'center',
+        display: 'flex'
     }}>
         { children }
     </div>
