@@ -4,6 +4,14 @@ export interface ContainerProps {
     children?: React.ReactNode;
 }
 
+export interface CardProps {
+    title: string;
+    modified: Date;
+    name: string;
+    picChosen: string;
+    Description: string;
+}
+
 export interface InputProps {
     id: string;
     type: "text" | "number" | "image";
@@ -19,6 +27,9 @@ export interface InputProps {
     backgroundColour?: string;
 }
 
-export interface CardProps {
-    backgroundColour: string;
+export interface LinkToQRProps {
+    link: string;
+    size: number;
 }
+
+

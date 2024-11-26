@@ -1,15 +1,8 @@
+import { CardProps } from './PropTypes';
 
-//the properties of the card 
-interface CardProp {
-    title: string;
-    modified: Date;
-    name: string;
-    picChosen: string;
-    Description: string;
-}
 
 //card component 
-const FlashCard= ({title,modified,name,picChosen,Description } :CardProp) => {
+const FlashCard= ({title,modified,name,picChosen,Description } :CardProps) => {
     const theDate: string = modified ? modified.toLocaleDateString() : "Date not available";//date
     
     return(<div className="card">
