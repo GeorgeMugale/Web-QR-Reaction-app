@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Right Quarter Positioning</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            margin: 50px auto;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .item {
+            position: absolute;
+            border: 1px solid #999;
+            padding: 10px;
+            background: #f9f9f9;
+            transition: all 0.5s ease-in-out;
+        }
+
+        @keyframes bounce { 
+            0%, 20%, 50%, 80%, 100% { 
+                transform: translateY(0); 
+            } 40% { 
+                transform: translateY(-30px); 
+            } 60% {
+                 transform: translateY(-15px); 
+            } 
+         } 
+
+        .bouncy { 
+            animation: bounce 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="top: 50px; left: 250px;">Item 1</div>
+        <div class="item" style="top: 150px; left: 300px;">Item 2</div>
+        <div class="item" >Topic</div>
+    </div>
+	
+	
+
+    <script>
+
+        const container = document.querySelector(".container");
+
+        const addItem = (comment) => {
+            var newItem = document.createElement("div");
+            newItem.className = "item bouncy";
+            newItem.style.top = "100px";
+            newItem.style.left = "300px";
+            newItem.innerHTML = comment;
+            newItem.style.opacity = "0";
+
+            container.appendChild(newItem);
+
+            setTimeout(() => {
+                newItem.style.opacity = "1";
+            }, 20);
+        };
+      
+
+        addItem("thats nice");
+
+        addItem('&#x1F600;');
+
+
+
+    </script>
+</body>
+</html>
