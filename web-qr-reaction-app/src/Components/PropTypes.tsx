@@ -41,3 +41,23 @@ export interface ButProps {
   Width: number;
   Height: number;
 }
+
+interface dimensions {
+    width: number;
+    height: number; 
+}
+
+export interface PostReplyProps {
+    text: string;
+    colour: "Red" | "Green" | "Yellow" | "Blue";
+    containerDimensions: dimensions;
+}
+
+export interface PostReplyViewProps {
+    topic: string;
+    width: number;
+    height: number;
+    background: string;
+    children?: Array<React.ReactNode>;
+    maxChildren?: number;
+}
