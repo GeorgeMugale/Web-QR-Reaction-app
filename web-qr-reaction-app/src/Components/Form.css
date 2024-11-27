@@ -1,0 +1,69 @@
+/* General Form Container */
+.form-container {
+    max-width: 600px; /* Set a max-width to limit the form's width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.form-input,
+.form-textarea,
+.form-select,
+.form-file-input {
+    width: 100%; /* Full width but only within its parent container */
+    max-width: 500px; /* Constrain the input field's width */
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    height: 150px;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+/* Radio Buttons */
+.form-color-option {
+    margin-bottom: 8px;
+}
+
+.form-radio-input {
+    margin-right: 8px;
+}
+
+.form-radio-label {
+    font-weight: normal;
+}
+
+/* Submit Button */
+.form-button {
+    width: 100%;
+    max-width: 500px; /* Ensure button doesn't stretch beyond the form's max width */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+    .form-button:hover {
+        background-color: #0056b3;
+    }
