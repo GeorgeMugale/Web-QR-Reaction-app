@@ -1,23 +1,26 @@
 import React, { useState } from "react";
-import "./FormComponent.css"; // Import the CSS file
+import "./Form.css"; // Import the CSS file
+interface FormComponentProps {
+    onSubmit: (data: FormData) => void;
+  }
 
 interface FormData {
     name: string;
+    subject: string;
     post: string;
     timeToLive: string;
+    maxReplies: number;
     favoriteColor: string;
     picture: File | null;
-}
-
-interface FormComponentProps {
-    onSubmit: (data: FormData) => void;
 }
 
 const FormComponent: React.FC<FormComponentProps> = ({ onSubmit }) => {
     const [formData, setFormData] = useState<FormData>({
         name: "",
+        subject: "", 
         post: "",
         timeToLive: "30 minutes",
+        maxReplies: 100,
         favoriteColor: "primary", // Default color
         picture: null,
     });
@@ -55,6 +58,15 @@ const FormComponent: React.FC<FormComponentProps> = ({ onSubmit }) => {
                 className="form-input"
             />
 
+            <label className="form-label">Subject:</label>
+            <input
+                type="text"
+                name="name"
+                value={formData.subject}
+                onChange={handleChange}
+                className="form-input"
+            />
+
             <label className="form-label">Post:</label>
             <textarea
                 name="post"
@@ -74,6 +86,15 @@ const FormComponent: React.FC<FormComponentProps> = ({ onSubmit }) => {
                 <option value="1 hour">1 hour</option>
                 <option value="2 hours">2 hours</option>
             </select>
+
+            <label className="form-label">Maximum Replies: </label>
+            <input
+                type="number"
+                name="name"
+                value={formData.maxReplies}
+                onChange={handleChange}
+                className="form-input"
+            />
 
             <label className="form-label">Profile Picture:</label>
             <input

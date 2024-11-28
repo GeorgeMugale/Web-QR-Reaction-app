@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import MakePost from "./Pages/MakePost";
 import ReviewPost from "./Pages/ReviewPost";
 import ViewPost from "./Pages/ViewPost";
+import NotFound from "./Pages/Time out page";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/makepost" element={<MakePost />} />
                 <Route path="/reviewpost" element={<ReviewPost />} />
                 <Route path="/viewpost" element={<ViewPost />} />
+                <Route path="/timeout" element={<NotFound />} />
                 <Route path="/*" element={ <div>Page Not Found</div>} />
             </Routes>
         </BrowserRouter>
