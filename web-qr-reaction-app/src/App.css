@@ -1,3 +1,92 @@
+/* falsh card css according to template sent by George */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    
+}
+
+.container {
+    position: relative;
+    border: 2px solid #333;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerContainer {
+    width:auto;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    background: dodgerBlue;
+    margin: 0em 1em 0em 1em;
+    padding: 1.2em;
+    border: solid 1px hsl(0, 0%, 7%);
+    border-radius: 20px;
+    box-shadow: 12px 12px 10px -6px rgba(0, 0, 0, 1);
+}
+
+.img-head img{
+    width: 100%;
+}
+.card button{
+    background: hsl(47, 88%, 63%);
+    border: 0px solid;
+    font-weight: 800;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+.published{
+    font-weight: 500;
+    font-size: 0.8em;
+}
+.card h1{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+.descr{
+    color: black;
+    font-weight: 500;
+}
+.author{
+    display: flex;
+    align-items: center;
+}
+.author img {
+    width: 3em;
+}
+.author h6 {
+    margin-left: 1em;
+    font-size: 1em;
+    font-weight: 800;
+}
+@media only screen and (min-width: 600px) {
+    .card{
+        width: 25%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+commented out the default code incase we need it for later
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,3 +129,4 @@
 .read-the-docs {
   color: #888;
 }
+*/
